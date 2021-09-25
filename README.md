@@ -39,6 +39,10 @@ Gunakan filter `tcp.port == 3306` karena port default NySQL adalah 3306
 - Isi jawaban urutan konfigurasi pengkabelan `T568B`
 ![Nomor 5](assets/Nomor%205.png)
 ## 6. Cari username dan password ketika melakukan login ke FTP Server!
+- Gunakan display filter `ftp`
+- Cari bagian yang memiliki argumen `Request: USER` diikuti dengan username FTP Server
+- Untuk passwordnya, cari bagian yang memiliki argumen `Request: PASS` diikuti dengan password FTP Server
+![Nomor 4](https://i.imgur.com/4Nym81b.png)
 
 ## 7. Ada 500 file zip yang disimpan ke FTP Server dengan nama 0.zip, 1.zip, 2.zip, ..., 499.zip. Simpan dan Buka file pdf tersebut. (Hint = nama pdf-nya "Real.pdf")
 - Gunakan syntax filter `frame contains Real.pdf`
@@ -52,6 +56,9 @@ Gunakan filter `tcp.port == 3306` karena port default NySQL adalah 3306
 - Jika berhasil, File tersebut jika dibuka akan terdapat tulisan `YOU FOUND ME`
 ![Nomor 7-4](assets/Nomor%207-4.png)
 ## 8. Cari paket yang menunjukan pengambilan file dari FTP tersebut!
+- Gunakan display filter `ftp.request.command==RETR`
+![Nomor 8](https://i.imgur.com/cseYOBk.png)
+Ternyata kosong, karena tidak ada file yang diambil (download)
 
 ## 9. Dari paket-paket yang menuju FTP terdapat inidkasi penyimpanan beberapa file. Salah satunya adalah sebuah file berisi data rahasia dengan nama "secret.zip". Simpan dan buka file tersebut!
 - Gunakan syntax filter `ftp-data.command contains "secret.zip"`
@@ -84,8 +91,12 @@ Gunakan filter `tcp.port == 3306` karena port default NySQL adalah 3306
 - Jika berhasil, akan terdapat gambar luffy.
 ![Nomor 10-6](assets/Nomor%2010-6.png)
 ## 11. Filter sehingga wireshark hanya mengambil paket yang berasal dari port 80! 
+Gunakan capture filter `src port 80`
+![Nomor 11](https://i.imgur.com/fU4GTca.png)
 
 ## 12. Filter sehingga wireshark hanya mengambil paket yang mengandung port 21!
+Gunakan capture filter `port 21` pada 'Adapter for loopback traffic capture'
+![Nomor 12](https://i.imgur.com/KcWFR9F.png)
 
 ## 13. Filter sehingga wireshark hanya menampilkan paket yang menuju port 443! Gunakan perintah capture filter dst port 443
 Gunakan syntax `dst port 443` untuk mendapakan paket menuju port 443
@@ -100,3 +111,5 @@ dengan hasil berikut dimana semua destination menuju IP address yang sama
 ![no14-2](assets/no14-2.png)
 
 ## 15. Filter sehingga wireshark hanya mengambil paket yang berasal dari ip kalian!
+Gunakan capture filter `src host <nomor ip kita>`
+![Nomor 15](https://imgur.com/4GnlZvD)
