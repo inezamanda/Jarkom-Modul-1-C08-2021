@@ -24,7 +24,7 @@ Gunakan syntax filter `http.authbasic` maka diperoleh hasil berikut :
 - Didalam salah satu paket tersebut terdapat basic authorization yang didalamnya terdapat username dan password.
 - Gunakan username dan password untuk login ke `basic.ichimarumaru.tech`
 - Isi jawaban urutan konfigurasi pengkabelan `T568A`
-![Nomor 3](assets/Nomor 3.png)
+![Nomor 3](assets/Nomor%203.png)
 ## 4. Temukan paket mysql yang mengandung perintah query select!
 Gunakan filter `tcp.port == 3306` karena port default NySQL adalah 3306
 ![no4-1](assets/no4-1.png)
