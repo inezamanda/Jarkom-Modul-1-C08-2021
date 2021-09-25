@@ -112,4 +112,4 @@ dengan hasil berikut dimana semua destination menuju IP address yang sama
 
 ## 15. Filter sehingga wireshark hanya mengambil paket yang berasal dari ip kalian!
 Gunakan capture filter `src host <nomor ip kita>`
-![Nomor 15](https://imgur.com/4GnlZvD)
+![Nomor 15](https://i.imgur.com/4GnlZvD.png)
