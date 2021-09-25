@@ -26,7 +26,7 @@ Gunakan syntax filter `http.authbasic` maka diperoleh hasil berikut :
 - Isi jawaban urutan konfigurasi pengkabelan `T568A`
 ![Nomor 3](assets/Nomor%203.png)
 ## 4. Temukan paket mysql yang mengandung perintah query select!
-Gunakan filter `tcp.port == 3306` karena port default NySQL adalah 3306
+Gunakan filter `mysql.query matches select`
 ![no4-1](assets/no4-1.png)
 ![no4-2](assets/no4-2.png)
 ![no4-3](assets/no4-3.png)
