@@ -46,7 +46,7 @@ Gunakan filter `tcp.port == 3306` karena port default NySQL adalah 3306
 - klik kanan salah satu paket dan kemudian follow TCP Stream
 ![Nomor 7-1](assets/Nomor%207-1.png)
 - Pilih untuk menampilkan data dalam `Raw`
--![Nomor 7-2](assets/Nomor%207-2.png)
+![Nomor 7-2](assets/Nomor%207-2.png)
 - Kemudian save as `Real.pdf`
 ![Nomor 7-3](assets/Nomor%207-3.png)
 - Jika berhasil, File tersebut jika dibuka akan terdapat tulisan `YOU FOUND ME`
@@ -54,9 +54,35 @@ Gunakan filter `tcp.port == 3306` karena port default NySQL adalah 3306
 ## 8. Cari paket yang menunjukan pengambilan file dari FTP tersebut!
 
 ## 9. Dari paket-paket yang menuju FTP terdapat inidkasi penyimpanan beberapa file. Salah satunya adalah sebuah file berisi data rahasia dengan nama "secret.zip". Simpan dan buka file tersebut!
+- Gunakan syntax filter `ftp-data.command contains "secret.zip"`
+![Nomor 9-1](assets/Nomor%209-1.png)
+- Akan terdapat paket yang berprotokol `FTP-DATA`
+- klik kanan salah satu paket dan kemudian follow TCP Stream
+![Nomor 9-2](assets/Nomor%209-2.png)
+- Pilih untuk menampilkan data dalam `Raw`
+![Nomor 9-3](assets/Nomor%209-3.png)
+- Kemudian save as `secret.zip`
+![Nomor 9-4](assets/Nomor%209-4.png)
+- Jika berhasil, Didalam zip file tersebut terdapat wanted.pdf yang dikunci
+![Nomor 9-5](assets/Nomor%209-5.png)
 
 ## 10. Selain itu terdapat "history.txt" yang kemungkinan berisi history bash server tersebut! Gunakan isi dari "history.txt" untuk menemukan password untuk membuka file rahasia yang ada di "secret.zip"!
-
+- Gunakan syntax filter `ftp-data.command contains "history.txt"`
+- Akan terdapat paket yang berprotokol `FTP-DATA`
+- klik kanan salah satu paket dan kemudian follow TCP Stream
+![Nomor 10-1](assets/Nomor%2010-1.png)
+- Pilih untuk menampilkan data dalam `ASCII` karena ekstensi `.txt` tidak perlu didownload. Didalam file dapat terlihat bahwa password untuk `wanted.pdf` berada pada file `bukanapaapa.txt`
+![Nomor 10-2](assets/Nomor%2010-2.png)
+- Gunakan syntax filter `ftp-data.command contains "bukanapaapa.txt"`
+- Akan terdapat paket yang berprotokol `FTP-DATA`
+- klik kanan salah satu paket dan kemudian follow TCP Stream
+![Nomor 10-3](assets/Nomor%2010-3.png)
+- Pilih untuk menampilkan data dalam `ASCII` karena ekstensi `.txt` tidak perlu didownload. Dapat dilihat bahwa password untuk `secret.zip` yaitu `d1b1langbukanapaapajugagapercaya`
+![Nomor 10-4](assets/Nomor%2010-4.png)
+- Buka file `wanted.pdf` dengan password
+![Nomor 10-5](assets/Nomor%2010-5.png)
+- Jika berhasil, akan terdapat gambar luffy.
+![Nomor 10-6](assets/Nomor%2010-6.png)
 ## 11. Filter sehingga wireshark hanya mengambil paket yang berasal dari port 80! 
 
 ## 12. Filter sehingga wireshark hanya mengambil paket yang mengandung port 21!
