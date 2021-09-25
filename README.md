@@ -8,7 +8,7 @@ Anggota Kelompok C08 :
 * 05111940000209 - Refaldyka Galuh Pratama
 
 ## 1. Sebutkan webserver yang digunakan pada "ichimarumaru.tech"! 
-- Display filter dengan syntax `http.host contains "ichimarumaru.tech"`
+- Display filter dengan syntax `http.host == ichimarumaru.tech`
 ![no1-1](assets/no1-1.png)
 - Klik kanan dan klik follow lalu pilih TCP stream
 - Web server yang digunakan adalah nginx/1.18.0 (Ubuntu)
