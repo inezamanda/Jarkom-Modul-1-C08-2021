@@ -19,7 +19,12 @@ Gunakan syntax filter `http.authbasic` maka diperoleh hasil berikut :
 ![no2](assets/no2.png)
 
 ## 3. Ikuti perintah di basic.ichimarumaru.tech! Username dan password bisa didapatkan dari file .pcapng!
-
+- Gunakan syntax filter `http.host contains "basic.ichimarumaru.tech"` pada file `.pcapng` yang telah didownload untuk nomor 1-5.
+- Akan terdapat beberapa paket berprotokol `HTTP`.
+- Didalam salah satu paket tersebut terdapat basic authorization yang didalamnya terdapat username dan password.
+- Gunakan username dan password untuk login ke `basic.ichimarumaru.tech`
+- Isi jawaban urutan konfigurasi pengkabelan `T568A`
+![Nomor 3](assets/Nomor 3.png)
 ## 4. Temukan paket mysql yang mengandung perintah query select!
 Gunakan filter `tcp.port == 3306` karena port default NySQL adalah 3306
 ![no4-1](assets/no4-1.png)
