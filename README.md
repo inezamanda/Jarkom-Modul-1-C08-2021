@@ -8,13 +8,23 @@ Anggota Kelompok C08 :
 * 05111940000209 - Refaldyka Galuh Pratama
 
 ## 1. Sebutkan webserver yang digunakan pada "ichimarumaru.tech"! 
-
+- Display filter dengan syntax `http.host contains "ichimarumaru.tech"`
+![no1-1](assets/no1-1.png)
+- Klik kanan dan klik follow lalu pilih TCP stream
+- Web server yang digunakan adalah nginx/1.18.0 (Ubuntu)
+![no1-2](assets/no1-2.png)
 
 ## 2. Temukan paket dari web-web yang menggunakan basic authentication method!
+Gunakan syntax filter `http.authbasic` maka diperoleh hasil berikut :
+![no2](assets/no2.png)
 
 ## 3. Ikuti perintah di basic.ichimarumaru.tech! Username dan password bisa didapatkan dari file .pcapng!
 
 ## 4. Temukan paket mysql yang mengandung perintah query select!
+Gunakan filter `tcp.port == 3306` karena port default NySQL adalah 3306
+![no4-1](assets/no4-1.png)
+![no4-2](assets/no4-2.png)
+![no4-3](assets/no4-3.png)
 
 ## 5. Login ke portal.ichimarumaru.tech kemudian ikuti perintahnya! Username dan password bisa didapat dari query insert pada table users dari file .pcap!
 
@@ -33,7 +43,15 @@ Anggota Kelompok C08 :
 ## 12. Filter sehingga wireshark hanya mengambil paket yang mengandung port 21!
 
 ## 13. Filter sehingga wireshark hanya menampilkan paket yang menuju port 443! Gunakan perintah capture filter dst port 443
+Gunakan syntax `dst port 443` untuk mendapakan paket menuju port 443
+![no13-1](assets/no13-1.png)
+sehingga diperoleh
+![no13-2](assets/no13-2.png)
 
 ## 14. Filter sehingga wireshark hanya mengambil paket yang tujuannya ke kemenag.go.id!Gunakan perintah capture filter dst host kemenag.go.id
+Gunakan capture filter dengan syntax `dst host kemenag.go.id`
+![no14-1](assets/no14-1.png)
+dengan hasil berikut dimana semua destination menuju IP address yang sama
+![no14-2](assets/no14-2.png)
 
 ## 15. Filter sehingga wireshark hanya mengambil paket yang berasal dari ip kalian!
