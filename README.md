@@ -32,11 +32,25 @@ Gunakan filter `tcp.port == 3306` karena port default NySQL adalah 3306
 ![no4-3](assets/no4-3.png)
 
 ## 5. Login ke portal.ichimarumaru.tech kemudian ikuti perintahnya! Username dan password bisa didapat dari query insert pada table users dari file .pcap!
-
+- Gunakan syntax filter `mysql contains username && mysql contains password`
+- Akan terdapat satu hasil paket berprotokol `MySQL`
+- Buka Paket tersebut akan terdapat query username dan password yang sama dengan yang diminta soal
+- Gunakan username dan password untuk login ke `portal.ichimarumaru.tech`
+- Isi jawaban urutan konfigurasi pengkabelan `T568B`
+![Nomor 5](assets/Nomor%205.png)
 ## 6. Cari username dan password ketika melakukan login ke FTP Server!
 
 ## 7. Ada 500 file zip yang disimpan ke FTP Server dengan nama 0.zip, 1.zip, 2.zip, ..., 499.zip. Simpan dan Buka file pdf tersebut. (Hint = nama pdf-nya "Real.pdf")
-
+- Gunakan syntax filter `frame contains Real.pdf`
+- Akan terdapat paket yang berprotokol `FTP-DATA`
+- klik kanan salah satu paket dan kemudian follow TCP Stream
+![Nomor 7-1](assets/Nomor%207-1.png)
+- Pilih untuk menampilkan data dalam `Raw`
+-![Nomor 7-2](assets/Nomor%207-2.png)
+- Kemudian save as `Real.pdf`
+![Nomor 7-3](assets/Nomor%207-3.png)
+- Jika berhasil, File tersebut jika dibuka akan terdapat tulisan `YOU FOUND ME`
+![Nomor 7-4](assets/Nomor%207-4.png)
 ## 8. Cari paket yang menunjukan pengambilan file dari FTP tersebut!
 
 ## 9. Dari paket-paket yang menuju FTP terdapat inidkasi penyimpanan beberapa file. Salah satunya adalah sebuah file berisi data rahasia dengan nama "secret.zip". Simpan dan buka file tersebut!
