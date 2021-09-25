@@ -2,12 +2,13 @@
 
 Berikut adalah laporan resmi Praktikum Jaringan Komputer Modul 1 tahun 2021
 
-Anggota Kelompok :
+Anggota Kelompok C08 :
 * 05111940000100 - Muhammad Raihan
 * 05111940000208 - Inez Yulia Amanda
 * 05111940000209 - Refaldyka Galuh Pratama
 
 ## 1. Sebutkan webserver yang digunakan pada "ichimarumaru.tech"! 
+
 
 ## 2. Temukan paket dari web-web yang menggunakan basic authentication method!
 
